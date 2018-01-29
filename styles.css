@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
   margin:0;
 }
@@ -29,9 +32,10 @@ div{
 .login {
     width: 25%;
     float: left;
-    border:black;
+    border: 1px solid red;
 }
 .carousel {
     width: 75%;
     float: left;
+    border: 1px solid red;
 }
