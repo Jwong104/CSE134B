@@ -141,6 +141,23 @@ input[type="submit"] {
     font-size: 1.5vw;
 }
 
+.project_name{
+  font-size: 50px;
+  float: left;
+}
+.start_date{
+  float: right;
+}
+.images{
+  float: left;
+}
+.stylist_associate{
+  float: right;
+}
+.budget{
+  float: left;
+}
+
 
 
 .home_text{
