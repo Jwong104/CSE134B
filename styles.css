@@ -134,11 +134,11 @@ input[type="text"] {
   border: 0;
   border-bottom: 1px solid black;
   outline: 0;
-  font-size: 2vw;
+  font-size: 1.5vw;
 
 }
 input[type="submit"] {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 
