@@ -9,7 +9,35 @@
   }
 
   div{
+    height:auto;
+    width: auto;
+  }
+  .profile .img{
+    height: 30%;
+  }
+
+  .profile .img img{
+
+    max-width: 80%;
+    max-height:80%;
     height: auto;
+    width: auto;
+    image-rendering: -webkit-optimize-contrast;
+  }
+  .nav *{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: center;
+  }
+  ul li{
+    text-decoration: none;
+    display: block;
   }
 
   .item{
@@ -21,42 +49,77 @@
 
 </head>
 <body>
-  <h1>Active Project</h1>
+  <div class="main-page">
+    <div class="row" name="explore_bar">
+      <div class="column" style="flex:25%; border-style:solid">
+        <div class="profile" >
+          <img src="photos/steve.jpg" alt="My Man Steve" >
+        </div>
+        <h1 style="text-align:center; "> John Doe </h1>
+        <p style="text-align:center;"> Edit Profile</p>
 
-  <div class="active_project">
-    <table style="width:100%">
-      <tr>
-        <th class="project_name" align="left">New Hair</th>
-        <th class="start_date" align="right">End Date: Jan 18, 2018</th>
-      </tr>
-      <tr>
-        <td class="budget">Budget: $50</td>
-      </tr>
-      <tr>
-        <td class="images"><img src="photos/hair.png" class="item"></img></td>
-        <td class="stylist_associate" align="right">Stylist: Jane Doe</br>Associate: James Doe</td>
-      </tr>
+        <div class="projects" style="text-align:center;">
+          <h1 style="text-align:center;">Projects</h1>
 
-    </table>
-  </div>
-  <div class="active_project">
-    <table style="width:100%">
-      <tr>
-        <th class="project_name" align="left">New Hair</th>
-        <th class="start_date" align="right">End Date: Jan 18, 2018</th>
-      </tr>
-      <tr>
-        <td class="budget">Budget: $50</td>
-      </tr>
-      <tr>
-        <td class="images"><img src="photos/shoes.png" class="item"></img><img src="photos/shirt.png" class="item"></img><img src="photos/tie.png" class="item"></td>
+          <ul style=" display:inline-block; text-align:left;">
+            <li><a href="active_project.html">Active</a></li>
+            <li><a href="inactive_project.html">Inactive</a></li>
+            <li><a href="completed_project.html">Completed</a></li>
+            <li><a href="create_project.html">Create New</a></li>
+          </ul>
+        </div>
+        <h1 style="text-align:center;"> Messages </h1>
+        <h1 style="text-align:center;"> Explore </h1>
 
-        <td class="stylist_associate" align="right">Stylist: Jane Doe</br>Associate: James Doe</td>
-      </tr>
+        <div style="text-align:center; !important">
+          <ul style="display:inline-block; text-align:left; !important">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
 
-    </table>
-  </div>
+      <div class="column" style="flex:75%;">
+        <h1>Active Project</h1>
+
+        <div class="active_project">
+          <table style="width:100%">
+            <tr>
+              <th class="project_name" align="left">New Hair</th>
+              <th class="start_date" align="right">End Date: Jan 18, 2018</th>
+            </tr>
+            <tr>
+              <td class="budget">Budget: $50</td>
+            </tr>
+            <tr>
+              <td class="images"><img src="photos/hair.png" class="item"></img></td>
+              <td class="stylist_associate" align="right">Stylist: Jane Doe</br>Associate: James Doe</td>
+            </tr>
+
+          </table>
+        </div>
+        <div class="active_project">
+          <table style="width:100%">
+            <tr>
+              <th class="project_name" align="left">New Hair</th>
+              <th class="start_date" align="right">End Date: Jan 18, 2018</th>
+            </tr>
+            <tr>
+              <td class="budget">Budget: $50</td>
+            </tr>
+            <tr>
+              <td class="images"><img src="photos/shoes.png" class="item"></img><img src="photos/shirt.png" class="item"></img><img src="photos/tie.png" class="item"></td>
+
+              <td class="stylist_associate" align="right">Stylist: Jane Doe</br>Associate: James Doe</td>
+            </tr>
+
+          </table>
+        </div>
+      </div>
+    </div>
 
 
-</body>
-</html>
+  </body>
+  </html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Contact PS!</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <meta charset="UTF-8">
+  <meta name="author" content="Edward Guo, Jason Wong, Zhe Wang">
+  <meta name="keywords" content="Style, Clothes, Haircut, Personal Stylist">
+
+
+  <style>
+  html, body {
+    margin: 0;
+    display: block;
+    height: 100%;
+  }
+  div{
+    width:100%;
+    height:100%;
+  }
+    input[type=text] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('search.png');
+        background-size: 25px;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding:12px 20px 12px 40px;
+        max-width: 100%; !important
+    }
+
+    .explore{
+      float: left;
+    }
+    .search{
+      float: left;
+      display: inline-block;
+    }
+    /* Create two equal columns that floats next to each other */
+    .column1 {
+        float: left;
+        padding: 10px;
+        position:relative;
+        top: -10px;
+        height: 75px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    #profile{
+      float:left;
+      display:inline-block;
+      margin: 5px;
+    }
+    @media (min-width:1501px) {
+      #profile{
+        width:calc((100% - 30px)/3);
+      }
+    }
+    @media (max-width:1500px) {
+      #profile{
+        width:calc((100% - 20px)/2);
+      }
+    }
+
+  </style>
+
+
+</head>
+
+<body>
+  <div class="main-page">
+
+    <div class="row" name="explore_bar">
+      <div class="column" style="flex:25%; border-style:solid">
+
+      </div>
+
+      <div class="column" style="flex:75%;">
+
+        <div class="column1">
+          <h2 class="explore">Create New Project</h2>
+
+        </div>
+
+        <div class="row" id="profiles" style="border-style:solid">
+          <div class="row" name="explore_bar">
+            <div class="column" style="flex:25%; border-style:solid">
+
+            </div>
+
+            <div class="column" style="flex:75%;">
+            </div>
+          <!-- <div class="column">
+            <div><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+          </div>
+          <div class="column">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+          </div>
+          <div class="column">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+          </div> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
