@@ -11,6 +11,33 @@ div{
   height:100%;
 }
 
+.main-page{
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    position:relative;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+img{
+  width: 100%;
+}
+
 .header {
   position: relative;
   z-index: 1;
@@ -129,12 +156,21 @@ div{
 .auth p{
   font-size: 2vw;
 }
+.input{
+  padding-bottom:1vw;
+}
+.form-space{
+  padding-bottom:0vw;
+}
+
 
 input[type="text"] {
   border: 0;
   border-bottom: 1px solid black;
   outline: 0;
   font-size: 1.5vw;
+  display:inline;
+  max-width: 280px;
 
 }
 input[type="submit"] {
@@ -189,10 +225,11 @@ input[type="submit"] {
     max-height:100%;
     max-width:100%;
   }
-
-
-
+  input{
+    padding-bottom:1vw;
+  }
 }
+
 @media (min-width:760px)  {
   .carousel {
      padding-top:80px;
@@ -207,7 +244,8 @@ input[type="submit"] {
   .auth{
     padding-top: 50px;
     height: 70%;
-  }/*
+  }
+  /*
   .login .img img{
     max-height:100%;
     max-width:100%;
