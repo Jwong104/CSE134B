@@ -1,9 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <title>Contact PS!</title>
   <link rel="stylesheet" href="styles.css">
+
+  <meta charset="UTF-8">
+  <meta name="author" content="Edward Guo, Jason Wong, Zhe Wang">
+  <meta name="keywords" content="Style, Clothes, Haircut, Personal Stylist">
+
+
+  <style>
+    input[type=text] {
+        width: 100%;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('search.png');
+        background-size: 25px;
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding:12px 20px 12px 40px;
+    }
+
+    .explore{
+      float: left;
+    }
+    .search{
+      float: right;
+      display: inline-block;
+    }
+    /* Create two equal columns that floats next to each other */
+    .column1 {
+        float: left;
+        width: 100px;
+        padding: 10px;
+        position:relative;
+        top: -10px;
+        height: 75px; /* Should be removed. Only for demonstration */
+    }
+    .column2 {
+        float: left;
+        width: calc(100% - 100px);
+        padding: 10px;
+        height: 75px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .column {
+        float: left;
+        width: 33.33%;
+        padding: 10px;
+        position:relative;
+        top: -10px;
+        height: 50px; /* Should be removed. Only for demonstration */
+    }
+    .row-img {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 4px;
+    }
+    .column {
+      flex: 33.33%;
+      padding: 0 4px;
+    }
+
+    .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+    }
+    img{
+      width: 100%;
+    }
+
+  </style>
+
+
 </head>
+
 <body>
+  <div class="main-page">
+
+
+
+    <div class="row" name="explore_bar">
+
+      <div class="column1">
+        <h2 class="explore" float="left">Explore</h2>
+
+      </div>
+
+      <div class="column2">
+        <form>
+          <input type="text" class="search" float="right" placeholder="Search...">
+        </form>
+      </div>
+
+      <div class="right_block">
+        <div class="row-img">
+          <div class="column">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+          </div>
+          <div class="column">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+          </div>
+          <div class="column">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+            <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 
 
 </body>
