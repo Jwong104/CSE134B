@@ -10,6 +10,10 @@ div{
   width:100%;
   height:100%;
 }
+.main-page{
+  padding-left:3%;
+  padding-right: 3%;
+}
 
 .header {
   position: relative;
@@ -113,8 +117,6 @@ div{
   height: auto;
   width: auto;
   image-rendering: -webkit-optimize-contrast;
-
-
 }
 .auth{
   height: 70%;
