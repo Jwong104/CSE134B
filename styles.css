@@ -194,7 +194,10 @@ input[type="submit"] {
   float: left;
 }
 
-
+.active_project{
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+}
 
 .home_text{
   text-align: center;
