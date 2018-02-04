@@ -50,7 +50,7 @@ div{
 .footer{
 
   position: relative;
-  height: 4%;
+  height: 6%;
   width: 100%;
   border: 1px solid black;
   margin: auto;
@@ -60,15 +60,15 @@ div{
 }
 
 .credit {
-
   text-align: right;
-  padding-top: 5px;
+  padding-top: 0px;
   padding-right: 20px;
-  font-size: 12vw;
+  font-size: 1.5vw;
 }
 
 .home{
-  height: 90%;
+
+  height: 88%;
   display: block;
   bottom: 0;
   position: relative;
@@ -80,15 +80,14 @@ div{
     width: 65%;
     float: left;
     border: 1px solid red;
-    max-width: 100%;
     text-align: center;
 }
 
-.img img{
+.carousel .img img{
   max-width: 100%;
+  max-height:100%;
   height: auto;
-  width: 80%;
-  overflow: hidden;
+  width: auto;
   image-rendering: -webkit-optimize-contrast;
 
 }
@@ -98,8 +97,37 @@ div{
     padding-top: 80px;
     width: 35%;
     float: left;
+    max-width: 100%;
     border: 1px solid blue;
     text-align: center;
+}
+
+.login .img{
+  height: 30%;
+}
+
+.login .img img{
+
+  max-width: 80%;
+  max-height:80%;
+  height: auto;
+  width: auto;
+  image-rendering: -webkit-optimize-contrast;
+
+
+}
+.auth{
+  height: 70%;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow:hidden;
+
+
+}
+.auth p{
+  font-size: 2vw;
 }
 
 input[type="text"] {
@@ -110,31 +138,15 @@ input[type="text"] {
 
 }
 input[type="submit"] {
-
-    font-size: .5vw;
-}
-.logbtn{
-  text-align: center;
+    font-size: 2vw;
 }
 
-.auth{
-  padding-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  overflow:hidden;
 
-}
 
 .home_text{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-}
-
-.signup{
-  font-size: 1vw;
-  text-align: center;
 }
 
 @media (min-width:1px) and (max-width:798px) {
@@ -143,9 +155,25 @@ input[type="submit"] {
      height:50%;
      width: 100%;
   }
+  .auth{
+    padding-top: 0px;
+    height: 60%;
+  }
+  .login{
+    padding-top:10px;
+  }
+  .login .img{
+    height: 50%;
+  }
+  .login .img img{
+    max-height:100%;
+    max-width:100%;
+  }
+
+
 
 }
-@media (min-width:799px)  {
+@media (min-width:760px)  {
   .carousel {
      padding-top:80px;
      height:100%;
@@ -153,7 +181,15 @@ input[type="submit"] {
   }
   .login{
     padding-top:80px;
-    height:50%;
+    height:100%;
     width: 35%;
   }
+  .auth{
+    padding-top: 50px;
+    height: 70%;
+  }/*
+  .login .img img{
+    max-height:100%;
+    max-width:100%;
+  }*/
 }
