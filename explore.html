@@ -54,32 +54,6 @@
         display: table;
         clear: both;
     }
-    .column {
-        float: left;
-        width: 33.33%;
-        padding: 10px;
-        position:relative;
-        top: -10px;
-        height: 50px; /* Should be removed. Only for demonstration */
-    }
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 4px;
-    }
-    .column {
-      flex: 33.33%;
-      padding: 0 4px;
-    }
-
-    .column img {
-      margin-top: 8px;
-      vertical-align: middle;
-    }
-    img{
-      width: 100%;
-    }
-
   </style>
 
 
@@ -89,11 +63,12 @@
   <div class="main-page">
 
     <div class="row" name="explore_bar">
-      <div class="column" style="flex:25%">
+      <div class="column" style="flex:25%; border-style:solid">
 
       </div>
 
-      <div class="column" style="flex:75%">
+      <div class="column" style="flex:75%;">
+
         <div class="column1">
           <h2 class="explore" float="left">Explore</h2>
 
@@ -105,24 +80,21 @@
           </form>
         </div>
 
-        <div class="right_block">
-          <div class="row">
-            <div class="column">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-            </div>
-            <div class="column">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-            </div>
-            <div class="column">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-              <img src="https://longren.io/wp-content/uploads/2014/03/HTML.jpg">
-
-            </div>
+        <div class="row">
+          <div class="column">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+          </div>
+          <div class="column">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+          </div>
+          <div class="column">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
+            <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
           </div>
         </div>
       </div>
