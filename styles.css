@@ -5,6 +5,7 @@ html, body {
   margin: 0;
   display: block;
   height: 100%;
+  clear:none;
 }
 div{
   width:100%;
