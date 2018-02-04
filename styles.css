@@ -10,6 +10,11 @@ div{
   width:100%;
   height:100%;
 }
+.main-page{
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+}
 
 .header {
   position: relative;
@@ -140,6 +145,23 @@ input[type="text"] {
 }
 input[type="submit"] {
     font-size: 1.5vw;
+}
+
+.project_name{
+  font-size: 50px;
+  float: left;
+}
+.start_date{
+  float: right;
+}
+.images{
+  float: left;
+}
+.stylist_associate{
+  float: right;
+}
+.budget{
+  float: left;
 }
 
 
