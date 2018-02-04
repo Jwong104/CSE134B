@@ -78,17 +78,18 @@ div{
 .carousel {
     height: 100%;
     width: 65%;
-    padding-top: 80px;
     float: left;
     border: 1px solid red;
     max-width: 100%;
+    text-align: center;
 }
 
 .img{
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  width: auto;
+  width: 100%;
   overflow: hidden;
+
 }
 
 .login {
@@ -136,10 +137,25 @@ input[type="submit"] {
 }
 
 @media (min-width:1px) and (max-width:798px) {
-  .carousel, .login {
-    height:50%;
-    width: 100%; /*The width is 100%, when the viewport is 800px or smaller*/
+  .carousel {
+     padding-top:0px;
+     height:50%;
+     width: 100%;
   }
-
-
+  .login{
+    height:50%;
+    width: 100%;
+  }
+}
+@media (min-width:799px)  {
+  .carousel {
+     padding-top:80px;
+     height:100%;
+     width: 65%;
+  }
+  .login{
+    padding-top:80px;
+    height:100%;
+    width: 35%;
+  }
 }
