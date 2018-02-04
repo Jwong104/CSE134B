@@ -8,28 +8,29 @@ html, body {
 }
 div{
   width:100%;
-  height: 100%
+  height: 100%;
 }
 
 .header {
   position: relative;
   z-index: 1;
-  height: 9%;
+  height: 6%;
   width: 100%;
   border: 1px solid black;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: auto;
   overflow: hidden;
   left: 0;
   right: 0;
+  top: 0;
+  float: left;
 }
 .header ul{
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  top: 0;
   float: right;
+  font-size: 1.8vw;
 
 }
 .header ul li{
@@ -46,29 +47,99 @@ div{
   color: #333;
 }
 
+.footer{
+
+  position: relative;
+  height: 4%;
+  width: 100%;
+  border: 1px solid black;
+  margin: auto;
+  overflow: hidden;
+  bottom:0;
+  float:left; !important
+}
+
+.credit {
+
+  text-align: right;
+  padding-top: 5px;
+  padding-right: 20px;
+  font-size: 12vw;
+}
+
 .home{
-  height: 100%;
+  height: 90%;
   display: block;
   bottom: 0;
   position: relative;
+  float:left;
 }
 
 .carousel {
+    height: 100%;
     width: 65%;
+    padding-top: 80px;
     float: left;
     border: 1px solid red;
+    max-width: 100%;
 }
-.image-placeholder {
-    background-color: #eee;
-    display: block;
-    height: 180px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 260px;
+
+.img{
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  overflow: hidden;
 }
 
 .login {
+    height: 100%;
+    padding-top: 80px;
     width: 35%;
     float: left;
     border: 1px solid blue;
+    text-align: center;
+}
+
+input[type="text"] {
+  border: 0;
+  border-bottom: 1px solid black;
+  outline: 0;
+  font-size: 2vw;
+
+}
+input[type="submit"] {
+
+    font-size: .5vw;
+}
+.logbtn{
+  text-align: center;
+}
+
+.auth{
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  overflow:hidden;
+
+}
+
+.home_text{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signup{
+  font-size: 1vw;
+  text-align: center;
+}
+
+@media (min-width:1px) and (max-width:798px) {
+  .carousel, .login {
+    height:50%;
+    width: 100%; /*The width is 100%, when the viewport is 800px or smaller*/
+  }
+
+
 }

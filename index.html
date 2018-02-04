@@ -8,6 +8,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Edward Guo, Jason Wong, Zhe Wang">
   <meta name="keywords" content="Style, Clothes, Haircut, Personal Stylist">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 
@@ -16,22 +17,40 @@
   <div class="header">
     <ul>
       <li><a href="#">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact_us.html">Contact Us</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact Us</a></li>
       <li><a href="#">Sign-in</a></li>
     </ul>
   </div>
 
   <div class= "home">
+
     <div class="carousel">
-      <div class="image-placeholder">
-      </div>
-      <h1> Some Text </h1>
+
+      <p class="home_text"> Message Text or Quote </h1>
     </div>
 
     <div class="login">
+
+      <form class="auth">
+        <div>
+          <input type="text" name="userID" value="Username">
+          <br><br>
+          <input type="text" name="pswrd" value="Password">
+          <br><br>
+        </div>
+        <div class="logbtn">
+          <input type="submit" class ="logBtn" value="Login">
+        </div>
+      </form>
+      <p class="signup"> Sign up </p>
     </div>
   </div>
+
+  <div class="footer">
+    <p class="credit"> CSE 134B - Jason Wong, Zhe Wang, Edward Guo </p>
+  </div>
+
 
 </body>
 </html>
