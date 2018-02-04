@@ -22,16 +22,11 @@
   }
     input[type=text] {
         width: 100%;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
         border-radius: 4px;
-        font-size: 16px;
         background-color: white;
-        background-image: url('search.png');
-        background-size: 25px;
         background-position: 10px 10px;
         background-repeat: no-repeat;
-        padding:12px 20px 12px 40px;
+        padding:12px 20px 12px 5px;
         max-width: 100%; !important
     }
 
@@ -89,21 +84,30 @@
       <div class="column" style="flex:75%;">
 
         <div class="column1">
-          <h2 class="explore">Create New Project</h2>
+          <h1 class="explore">Create New Project</h1>
 
         </div>
 
         <div class="row" id="profiles" style="height:94%; border-style:solid">
-          <div class="column" style="margin-top: 5px; height:99%; flex:25%;">
-
-          </div>
-
-          <div class="column" style="flex:75%;">
-            <div style="margin-top: 5px; height:99%; flex:25%; border-style:solid">
+          <div class="column" style="margin-top: 5px; height:99%; flex:40%;">
+              <h2 margin="50px">Project Name</h2>
+              <form>
+                <input type="text" placeholder="Name...">
+              </form>
+              <h3> Budget
+                <form>
+                  <input type="text" placeholder="Budget...">
+                </form>
+              </h3>
 
             </div>
 
-        </div>
+            <div class="column" style="flex:60%;">
+              <div style="margin-top: 5px; height:99%; flex:25%; border-style:solid">
+                <h2 style="margin:10px">Description:</h2>
+                <textarea name="Text1" cols="40" rows="5" style="margin:10px"></textarea>
+              </div>
+            </div>
       </div>
     </div>
   </div>
