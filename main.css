@@ -3,3 +3,43 @@
   padding-right: 3%;
   padding-top: 1%;
 }
+.start_date{
+  align-items: flex-start;
+  text-align: right;
+  float: right;
+  display: block;
+}
+.project_name{
+  display: inline;
+  font-size: 30px;
+}
+.budget{
+  display: block;
+}
+.active_project{
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.progress{
+  width: 50%;
+}
+.image{
+  display: inline;
+}
+.stylist_associate{
+  float: right;
+  display: block;
+  text-align: right;
+}
+div::after{
+  clear:both;
+}
+.item{
+width: 70px;
+
+}
+.find_stylist{
+  font-size:20px;
+  text-align: center;
+}
