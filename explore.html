@@ -24,7 +24,10 @@
         background-position: 10px 10px;
         background-repeat: no-repeat;
         padding:12px 20px 12px 40px;
-        max-width: 100%; !important
+        max-width: 100%;
+    }
+    form::after{
+      clear:both;
     }
 
     .explore{
@@ -56,7 +59,7 @@
         display: table;
         clear: both;
     }
-    #profile{
+    .profile{
       float:left;
       display:inline-block;
       margin: 5px;
@@ -86,7 +89,6 @@
       margin: 0;
       padding: 0;
       overflow: hidden;
-      float: center;
     }
     ul li{
       text-decoration: none;
@@ -94,12 +96,12 @@
     }
 
     @media (min-width:1501px) {
-      #profile{
+      .profile{
         width:calc((100% - 30px)/3);
       }
     }
     @media (max-width:1500px) {
-      #profile{
+      .profile{
         width:calc((100% - 20px)/2);
       }
     }
@@ -112,9 +114,9 @@
 <body>
   <div class="main-page">
 
-    <div class="row" name="explore_bar">
+    <div class="row" id="explore_bar">
 
-      <div class="column nav" style="flex:25%; border-style:solid; style=text-align:center; ">
+      <div class="column nav" style="flex:25%; border-style:solid; text-align:center;">
         <div class="profile" >
           <img src="photos/steve.jpg" alt="My Man Steve" >
         </div>
@@ -174,17 +176,15 @@
             <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
             <img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326">
           </div> -->
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-          <div id="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326"></div>
-
-
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
+          <div class="profile" style="height:auto"><img src="https://media.gettyimages.com/photos/feeling-great-about-my-corporate-choices-picture-id507296326" alt="explore"></div>
         </div>
       </div>
     </div>
