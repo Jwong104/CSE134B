@@ -5,35 +5,32 @@
   <meta charset="UTF-8">
   <title>Completed Project</title>
   <link rel="stylesheet" href="main.css">
-
+  <script src="project.js"></script>
 </head>
 <body>
   <h1>Completed Project</h1>
+  <button onclick="addCompletedProject()">Add</button>
+  <div id="projects">
+    <div class="active_project">
 
-  <div class="active_project">
+      <p class="project_name">New Hair</p>
+      <p class="start_date">End Date: Jan 18, 2018</p>
+      <p class="budget">Budget: $50</p>
+      <p class="image"><img src="photos/hair.png" class="item" alt="hair"></p>
+      <p class="stylist_associate">Stylist: Jane Doe<br>Associate: James Doe</p>
+    </div>
 
-    <p class="project_name">New Hair</p>
-    <p class="start_date">End Date: Jan 18, 2018</p>
-    <p class="budget">Budget: $50</p>
-    <p class="image"><img src="photos/hair.png" class="item" alt="hair"></p>
-    <p class="stylist_associate">Stylist: Jane Doe<br>Associate: James Doe</p>
+    <div class="active_project">
+      <p class="project_name">New Hair</p>
+      <p class="start_date">End Date: Jan 18, 2018</p>
+      <p class="budget">Budget: $50</p>
+      <p class="image">
+        <img src="photos/hair.png" class="item" alt="hair">
+        <img src="photos/shoes.png" alt = "shoes" class="item">
+        <img src="photos/shirt.png" alt="shirt" class="item">
+      </p>
+      <p class="stylist_associate">Stylist: Jane Doe<br>Associate: James Doe</p>
+    </div>
   </div>
-
-  <div class="active_project">
-
-    <p class="project_name">New Hair</p>
-    <p class="start_date">End Date: Jan 18, 2018</p>
-    <p class="budget">Budget: $50</p>
-    <p class="image">
-      <img src="photos/hair.png" class="item" alt="hair">
-      <img src="photos/shoes.png" alt = "shoes" class="item">
-      <img src="photos/shirt.png" alt="shirt" class="item">
-    </p>
-    <p class="stylist_associate">Stylist: Jane Doe<br>Associate: James Doe</p>
-  </div>
-
-
-
-
 </body>
 </html>
