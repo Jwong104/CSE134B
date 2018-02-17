@@ -1,5 +1,3 @@
-document.onload = activeProject();
-
 function completedProject(projectName, endDate, budget, stylist, associate, imageUrls){
     this.projectName = projectName;
     this.endDate = endDate;
@@ -143,4 +141,14 @@ function populateActiveProjectHtml(){
     for(i = 0; i < p.length; i++)
       addInactiveProject(p[i]);
   }
+}
+
+function sendMessage(){
+  var input = document.getElementById("inputBox").value;
+  if(input === "")  return;
+  var chatBox = "<div style=\"border-radius: 15px; border: 1px solid black;\"><p class=\"chatContent\">"+input+"</p></div>";
+
+
+  document.getElementById("inputBox").value =  "";
+  document.getElementById("content").innerHTML += chatBox;
 }
