@@ -1,10 +1,11 @@
-function completedProject(projectName, endDate, budget, stylist, associate, imageUrls){
+function completedProject(projectName, endDate, budget, stylist, associate, imageUrls, projectID){
     this.projectName = projectName;
     this.endDate = endDate;
     this.budget = budget;
     this.stylist = stylist;
     this.associate = associate;
     this.imageUrls = imageUrls;
+    this.projectID = projectID;
 
     this.convertImageUrlToHtml = function(){
       var ret = "";
@@ -27,9 +28,10 @@ function completedProject(projectName, endDate, budget, stylist, associate, imag
     }
 }
 
-function inactiveProject(projectName, budget){
+function inactiveProject(projectName, budget, projectID){
     this.projectName = projectName;
     this.budget = budget;
+    this.projectID = projectID;
 
     this.html = function(){
       return "      <div class=\"active_project\">\n" +
@@ -40,13 +42,14 @@ function inactiveProject(projectName, budget){
     }
 }
 
-function activeProject(projectName, endDate, budget, stylist, associate, progressUrl){
+function activeProject(projectName, endDate, budget, stylist, associate, progressUrl, projectID){
     this.projectName = projectName;
     this.endDate = endDate;
     this.budget = budget;
     this.stylist = stylist;
     this.associate = associate;
     this.progressUrl = progressUrl;
+    this.projectID = projectID;
 
     this.html = function(){
       return "      <div class=\"active_project\">\n" +
@@ -110,9 +113,9 @@ function addActiveProject(p){
 //The load function is for testing
 function load(){
   var p = [];
-  p[0] = new inactiveProject("New Hair", "60");
-  p[1] = new inactiveProject("Hello world", "60");
-  localStorage.setItem("inactiveProject", JSON.stringify(p));
+  p[0] = new activeProject("New Hair", "Jan 9 2018", "60", "Eddie", "Jason", "photos/progress.png", "123");
+  p[1] = new activeProject("New Hair", "Jan 9 2018", "60", "Eddie", "Jason", "photos/progress.png", "1234");
+  localStorage.setItem("activeProject", JSON.stringify(p));
 }
 
 function populateInactiveProjectHtml(){
@@ -151,4 +154,21 @@ function sendMessage(){
 
   document.getElementById("inputBox").value =  "";
   document.getElementById("content").innerHTML += chatBox;
+}
+
+function finishIt(projectID){
+  var parent = document.getElementById("main-page");
+  var child = document.getElementById(projectID);
+  parent.removeChild(child);
+
+  var listOfProject = localStorage.getItem("activeProject");
+  for(i = 0; i < listOfProject.length; i++){
+    if(listOfProject[i].projectID === projectID){
+      var listOfCompletedProject = localStorage.getItem("completedProject");
+      listOfCompletedProject.push(listOfProject[i]);
+      localStorage.setItem("completedProject", JSON.stringify(listOfCompletedProject));
+      listOfProject.slice(i, 1);
+      localStorage.setItem("activeProject", JSON.stringify(listOfProject));
+    }
+  }
 }
