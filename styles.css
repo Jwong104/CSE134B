@@ -7,7 +7,6 @@ html, body {
   height: 100%;
 }
 
-
 div::after{
   clear: both;
 }
@@ -259,9 +258,5 @@ input[type="submit"] {
     padding-top: 50px;
     height: 70%;
   }
-  /*
-  .login .img img{
-    max-height:100%;
-    max-width:100%;
-  }*/
+  
 }
