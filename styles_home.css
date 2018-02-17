@@ -6,7 +6,10 @@ html, body {
   display: block;
   height: 100%;
 }
-
+div{
+  width:100%;
+  height:100%;
+}
 
 div::after{
   clear: both;
