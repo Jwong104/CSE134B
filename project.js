@@ -88,7 +88,37 @@ function getInactiveProjectHtml(p){
 
 }
 
+function getNavBar(){
 
+  return "    <div class=\"profile\" >\n"+
+                  "<img src=\"photos/steve.jpg\" alt=\"My Man Steve\">"+
+               "</div>"+
+              "<p class=\"heading\">John Doe<p>"+
+              "<p style=\"text-align:center;\">Edit Profile</p>"+
+
+              "<div class=\"projects\" style=\"text-align:center;\">"+
+              "<p class=\"heading\">Projects</h1>"+
+              "<ul style=\" display:inline-block; text-align:left;\">"+
+                "<li><a href=\"active_project.html\">Active</a></li>"+
+                "<li><a href=\"inactive_project.html\">Inactive</a></li>"+
+                "<li><a href=\"completed_project.html\">Completed</a></li>"+
+                "<li><a href=\"create_project.html\">Create New</a></li></ul>"+
+              "</div>"+
+              "<a href=\"#\"><p class=\"heading\"> Messages </p></a>"+
+              "<a href=\"explore.html\"><p class=\"heading\"> Explore </p></a>"+
+              "<div style=\"text-align:center; !important\">"+
+                  "<ul style=\"display:inline-block; text-align:left; !important\">"+
+                  "<li><a href=\"#\">Help</a></li>"+
+                  "<li><a href=\"#\">Support</a></li>"+
+                  "<li><a href=\"#\">Feedback</a></li>"+
+                  "<li><a href=\"#\">Contact Us</a></li>"+
+                "</ul>"+
+              "</div>";
+}
+
+function addNavBar(p){
+  //document.getElementById("#").innerHTML += getNavBar();
+}
 
 
 function addInactiveProject(p){
