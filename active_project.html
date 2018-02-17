@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <div class="main-page">
+  <div class="main-page" id="main-page">
     <h1>Active Project</h1>
     <div class="active_project" id="123">
       <p class="project_name"> New Hair</p>
@@ -16,7 +16,7 @@
       <p class="budget">Budget: $50</p>
       <p class="image"><img src="photos/progress.png" alt="Progress Image" class="progress"></p>
       <p class="stylist_associate">Stylist: Jane Doe<br>Associate: James Doe</p>
-      <button onclick="finishIt('123');">finish</button>
+      <button onclick="finishIt(this)" value="123">finish</button>
     </div>
     <div class="active_project"  id="1234">
       <p class="project_name"> New Hair</p>
@@ -24,7 +24,7 @@
       <p class="budget">Budget: $50</p>
       <p class="image"><img src="photos/progress.png" alt="Progress Image" class="progress"></p>
       <p class="stylist_associate">Stylist: Jane Doe<br>Associate: James Doe</p>
-      <button onclick="finishIt('1234');">finish</button>
+      <button onclick="finishIt(this)" value = "1234">finish</button>
     </div>
     <div class="active_project">
       <p class="project_name"> New Hair</p>
@@ -39,4 +39,5 @@
 
 
 </body>
+<script src="project.js"></script>
 </html>

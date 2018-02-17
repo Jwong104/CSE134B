@@ -77,7 +77,7 @@ function getCompletedProjectHtml(p){
                   "        <p class=\"project_name\">"+p.projectName+"</p>" +
                   "        <p class=\"start_date\">End Date: "+ p.endDate +"</p>\n" +
                   "        <p class=\"budget\">Budget: $"+p.budget+"</p>\n" +
-                  "        <p class=\"image\">" +p.convertImageUrlToHtml() +
+                  // "        <p class=\"image\">" +p.convertImageUrlToHtml() +
                   "        <p class=\"stylist_associate\">Stylist: "+ p.stylist+"<br>Associate: "+ p.associate +"</p>" +
                   "      </div>";
 }
@@ -159,11 +159,13 @@ function populateInactiveProjectHtml(){
 }
 
 function populateCompletedProjectHtml(){
+  console.log("Popultating completed projects");
   var data = localStorage.getItem("completedProject");
+  console.log(data);
   p = JSON.parse(data);
   if(data != null){
     for(i = 0; i < p.length; i++)
-      addInactiveProject(p[i]);
+      addCompletedProject(p[i]);
   }
 }
 
@@ -186,16 +188,22 @@ function sendMessage(){
   document.getElementById("content").innerHTML += chatBox;
 }
 
-function finishIt(projectID){
+function finishIt(button){
+  var projectID = button.value;
   var parent = document.getElementById("main-page");
+  console.log(projectID);
   var child = document.getElementById(projectID);
+  console.log(child);
   parent.removeChild(child);
 
-  var listOfProject = localStorage.getItem("activeProject");
+  var listOfProject = JSON.parse(localStorage.getItem("activeProject"));
   for(i = 0; i < listOfProject.length; i++){
+    console.log(listOfProject[i]);
     if(listOfProject[i].projectID === projectID){
       var listOfCompletedProject = localStorage.getItem("completedProject");
+      if(listOfCompletedProject == null) listOfCompletedProject = [];
       listOfCompletedProject.push(listOfProject[i]);
+      console.log(listOfCompletedProject);
       localStorage.setItem("completedProject", JSON.stringify(listOfCompletedProject));
       listOfProject.slice(i, 1);
       localStorage.setItem("activeProject", JSON.stringify(listOfProject));
