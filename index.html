@@ -47,20 +47,19 @@
         <img src="photos/300x300.png" alt="Placeholder image">
       </div>
 
-      <div class="auth">
-        <form>
-          <div class="input">
+      <div class="auth" id="forms">
+        <form id="forms2">
+          <div class="input" id="inputs">
             <input type="text" name="userID" placeholder="Username">
             <input type="text" name="pswrd" placeholder="Password">
           </div>
           <div class="logbtn">
             <!--<input type="submit" class ="logBtn" value="Login">-->
-
               <input type="button" onclick="location.href='explore.html';" value="Sign in" />
           </div>
-          <a href="signup.html">
-            <p class="signup"> Sign up </p>
-          </a>
+
+          <p class="signup" id="form2" onclick="signForm(this)"> Sign up </p>
+
         </form>
       </div>
 
@@ -71,9 +70,89 @@
     <p class="credit"> CSE 134B - Jason Wong, Zhe Wang, Edward Guo </p>
   </div>
 
-  <script>
+<script>
+  function signForm(elmnt){
+    var x = document.getElementById("forms2");
+    x.parentNode.removeChild(x);
 
-  </script>
+    var x = document.getElementById("forms");
+    var f = document.createElement("form");
+    x.appendChild(f);
+
+    var d = document.createElement("div");
+    d.setAttribute('class', "form_space");
+
+    var first = document.createElement("input"); //input element, text
+    first.setAttribute('type',"text");
+    first.setAttribute('name',"first");
+    first.setAttribute('placeholder', "First Name");
+    var out = document.createElement("input"); //input element, text
+    out.setAttribute('type',"text");
+    out.setAttribute('name',"last");
+    out.setAttribute('placeholder', "Last Name");
+
+    d.appendChild(first);
+    d.appendChild(out);
+    f.appendChild(d);
+
+    var d = document.createElement("div");
+    d.setAttribute('class', "form_space");
+
+    var inp = document.createElement("input"); //input element, text
+    inp.setAttribute('type',"text");
+    inp.setAttribute('name',"userID");
+    inp.setAttribute('placeholder', "Username");
+    d.appendChild(inp);
+    f.appendChild(d);
+    x.appendChild(f);
+
+    var pass = document.createElement("input"); //input element, text
+    pass.setAttribute('type',"text");
+    pass.setAttribute('name',"pswrd");
+    pass.setAttribute('placeholder', "Password");
+
+    d.appendChild(inp);
+    d.appendChild(pass);
+    f.appendChild(d);
+
+    var d = document.createElement("div");
+    d.setAttribute('class', "form_space");
+
+    var chk = document.createElement("input"); //input element, text
+    chk.setAttribute('type',"text");
+    chk.setAttribute('name',"chkPass");
+    chk.setAttribute('placeholder', "Re-enter Password");
+
+    d.appendChild(chk);
+    f.appendChild(d);
+
+    var d = document.createElement("div");
+    d.setAttribute('class', "form_space");
+
+    var mail = document.createElement("input"); //input element, text
+    mail.setAttribute('type',"text");
+    mail.setAttribute('name',"e-mail");
+    mail.setAttribute('placeholder', "E-mail");
+
+    d.appendChild(mail);
+    f.appendChild(d);
+
+    var d = document.createElement("div");
+    d.setAttribute('class', "logbtn");
+
+    var sub = document.createElement("input");
+    sub.setAttribute('type',"button");
+    sub.setAttribute('onclick',"location.href='explore.html';")
+    sub.setAttribute('value',"Sign in");
+
+
+    d.appendChild(sub);
+    f.appendChild(d);
+    x.appendChild(f);
+
+  }
+
+</script>
 
 </body>
 </html>
