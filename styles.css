@@ -1,14 +1,55 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 html, body {
   margin: 0;
   display: block;
   height: 100%;
 }
-
+.main-page{
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+}
+.start_date{
+  align-items: flex-start;
+  text-align: right;
+  float: right;
+  display: block;
+}
+.project_name{
+  display: inline;
+  font-size: 30px;
+}
+.budget{
+  display: block;
+}
+.active_project{
+  border: 2px solid #ccc;
+  margin-bottom: 20px;
+  overflow: auto;
+}
+.progress{
+  width: 50%;
+}
+.image{
+  display: inline;
+}
+.stylist_associate{
+  float: right;
+  display: block;
+  text-align: right;
+}
 div::after{
-  clear: both;
+  clear:both;
+}
+.item{
+  width: 70px;
+
+}
+.find_stylist{
+  font-size:20px;
+  text-align: center;
 }
 
 .clear {
@@ -28,10 +69,10 @@ div::after{
 }
 
 .column {
-    float: left;
-    width: 33.33%;
-    padding: 10px;
-    position:relative;
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  position:relative;
 }
 
 .column img {
@@ -116,11 +157,11 @@ img{
 }
 
 .carousel {
-    height: 100%;
-    width: 65%;
-    float: left;
-    border: 1px solid red;
-    text-align: center;
+  height: 100%;
+  width: 65%;
+  float: left;
+  border: 1px solid red;
+  text-align: center;
 }
 
 .carousel .img img{
@@ -133,13 +174,13 @@ img{
 }
 
 .login {
-    height: 100%;
-    padding-top: 80px;
-    width: 35%;
-    float: left;
-    max-width: 100%;
-    border: 1px solid blue;
-    text-align: center;
+  height: 100%;
+  padding-top: 80px;
+  width: 35%;
+  float: left;
+  max-width: 100%;
+  border: 1px solid blue;
+  text-align: center;
 }
 
 .login .img{
@@ -187,7 +228,7 @@ input[type="text"] {
 
 }
 input[type="submit"] {
-    font-size: 1.5vw;
+  font-size: 1.5vw;
 }
 
 .project_name{
@@ -220,9 +261,9 @@ input[type="submit"] {
 
 @media (min-width:1px) and (max-width:798px) {
   .carousel, .login {
-     padding-top:0px;
-     height:50%;
-     width: 100%;
+    padding-top:0px;
+    height:50%;
+    width: 100%;
   }
   .auth{
     padding-top: 0px;
@@ -245,9 +286,9 @@ input[type="submit"] {
 
 @media (min-width:760px)  {
   .carousel {
-     padding-top:80px;
-     height:100%;
-     width: 65%;
+    padding-top:80px;
+    height:100%;
+    width: 65%;
   }
   .login{
     padding-top:80px;
@@ -258,5 +299,5 @@ input[type="submit"] {
     padding-top: 50px;
     height: 70%;
   }
-  
+
 }
