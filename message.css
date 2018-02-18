@@ -6,17 +6,28 @@ html, body {
   display: block;
   height: 100%;
 }
-div{
-  width:100%;
-  height:100%;
-}
-
-div::after{
-  clear: both;
-}
 
 .clear {
   clear: both;
+}
+
+.chatBox{
+  padding:3px;
+  min-width: 50px;
+  float: right;
+  clear: both;
+  display: block;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.chatBox1{
+  padding:3px;
+  min-width: 50px;
+  float: left;
+  clear: both;
+  display: block;
+  border-radius: 15px;
+  border: 1px solid black;
 }
 
 .main-page{
