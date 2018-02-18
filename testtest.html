@@ -11,67 +11,6 @@
 
 
   <style>
-  html, body {
-    margin: 0;
-    display: block;
-    height: 100%;
-  }
-  div{
-    width:100%;
-    height:100%;
-  }
-    input[type=text] {
-        width: 100%;
-        box-sizing: border-box;
-        border: 2px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        background-color: white;
-        background-image: url('search.png');
-        background-size: 25px;
-        background-position: 10px 10px;
-        background-repeat: no-repeat;
-        padding:12px 20px 12px 40px;
-        max-width: 100%; !important
-    }
-
-    .explore{
-      float: left;
-    }
-    .search{
-      float: left;
-      display: inline-block;
-    }
-    /* Create two equal columns that floats next to each other */
-    .column1 {
-        float: left;
-        padding: 10px;
-        position:relative;
-        top: -10px;
-        height: 75px; /* Should be removed. Only for demonstration */
-    }
-
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-    #profile{
-      float:left;
-      display:inline-block;
-      margin: 5px;
-    }
-    @media (min-width:1501px) {
-      #profile{
-        width:calc((100% - 30px)/3);
-      }
-    }
-    @media (max-width:1500px) {
-      #profile{
-        width:calc((100% - 20px)/2);
-      }
-    }
 
   </style>
 
@@ -79,35 +18,46 @@
 </head>
 
 <body>
-
   <div class="main-page">
 
-    <div class="row" name="explore_bar">
-      <div class="column" style="flex:25%; border-style:solid">
+    <div class="row" id="explore_bar">
+
+      <div class="column nav" style="flex:25%; border-style:solid; text-align:center;">
+        <div class="profile" >
+          <img src="photos/steve.jpg" alt="My Man Steve" >
+        </div>
+
+        <p class="heading"> John Doe <p>
+        <p style="text-align:center;"> Edit Profile</p>
+
+        <div class="projects" style="text-align:center;">
+          <p class="heading">Projects</h1>
+
+          <ul style=" display:inline-block; text-align:left;">
+            <li><a href="active_project.html">Active</a></li>
+            <li><a href="inactive_project.html">Inactive</a></li>
+            <li><a href="completed_project.html">Completed</a></li>
+            <li><a href="create_project.html">Create New</a></li>
+          </ul>
+        </div>
+        <a href="#"><p class="heading"> Messages </p></a>
+        <a href="explore.html"><p class="heading"> Explore </p></a>
+
+        <div style="text-align:center; !important">
+          <ul style="display:inline-block; text-align:left; !important">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Feedback</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
 
       </div>
 
       <div class="column" style="flex:75%;">
 
-        <div class="column1">
-          <h2 class="explore">Create New Project</h2>
-
-        </div>
-
-        <div class="row" id="profiles" style="border-style:solid">
-          <div class="row" name="explore_bar">
-            <div class="column" style="flex:25%; border-style:solid">
-
-            </div>
-
-            <div class="column" style="flex:75%;">
-            </div>
-        </div>
       </div>
     </div>
   </div>
-
-
-
-</body>
-</html>
+  </body>
+  </html>
