@@ -106,8 +106,8 @@
 <body>
   <div class="main-page">
 
-    <div class="row">
-      <div class="column" style="flex:25%; border-style:solid">
+    <div class="row" style="height:100%;">
+      <div class="column" style="height:100%; flex:25%; border-style:solid">
         <div class="profile" >
           <img src="photos/steve.jpg" alt="My Man Steve" >
         </div>
@@ -144,23 +144,26 @@
 
         </div>
 
-        <div class="row" id="profiles" style="height:94%; border-style:solid">
-          <div class="column" style="margin-top: 5px; height:99%; flex:40%;">
+        <div class="row" id="profiles" style="height:92.5%; border-style:solid; width:100%">
+          <div class="column" style="margin-top: 5px; height:100%; width:100%; flex:40%;">
             <h2 style="margin:50px">Project Name</h2>
             <form>
-              <input type="text" placeholder="Name...">
+              <input type="text" id="name" placeholder="Name...">
             </form>
             <h3> Budget</h3>
             <form>
-              <input type="text" placeholder="Budget...">
+              <input type="text" id="budget" placeholder="Budget...">
             </form>
+            <div class="column" style="height:100px; width:200px; float:right; position: absolute; bottom:0; right:0">
+              <button type="button" onclick="createProject()" style="height:100%; width:100%;">Create</button>
+            </div>
 
           </div>
 
           <div class="column" style="flex:60%;">
-            <div style="margin-top: 5px; height:99%; border-style:solid">
-              <h2 style="margin:10px">Description:</h2>
-              <textarea name="Text1" cols="40" rows="5" style="margin:10px"></textarea>
+            <div style="margin-top: 5px; height:100%; border-style:solid">
+              <h2 style="margin:10px; height:5%">Description:</h2>
+              <textarea name="Text1" id="desc" style="margin:10px; width:95%; height:80%"></textarea>
             </div>
           </div>
         </div>
@@ -168,7 +171,24 @@
     </div>
   </div>
 
+<script>
+function createProject(){
+  var pname = document.getElementById("name").value;
+  var pbudget = document.getElementById("budget").value;
+  var pdesc = document.getElementById("desc").value;
 
+  console.log(pname);
+  console.log(pbudget);
+  console.log(pdesc);
+
+  if(pname ==="" || pbudget ==="" || pdesc ===""){
+    alert("Please fill out all fields.");
+    return;
+  }
+//TODO link this to inactive projects
+
+}
+</script>
 
 </body>
 </html>
