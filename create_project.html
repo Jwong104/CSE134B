@@ -170,24 +170,32 @@
       </div>
     </div>
   </div>
+  <script src="project.js"></script>
 
-<script>
-function createProject(){
-  var pname = document.getElementById("name").value;
-  var pbudget = document.getElementById("budget").value;
-  var pdesc = document.getElementById("desc").value;
+  <script>
+  function createProject(){
+    var pname = document.getElementById("name").value;
+    var pbudget = document.getElementById("budget").value;
+    var pdesc = document.getElementById("desc").value;
 
-  console.log(pname);
-  console.log(pbudget);
-  console.log(pdesc);
+    console.log(pname);
+    console.log(pbudget);
+    console.log(pdesc);
 
-  if(pname ==="" || pbudget ==="" || pdesc ===""){
-    alert("Please fill out all fields.");
-    return;
+    if(pname ==="" || pbudget ==="" || pdesc ===""){
+      alert("Please fill out all fields.");
+      return;
+    }
+    //TODO link this to inactive projects
+    var p = new inactiveProject(pname, pbudget, uuid());
+    console.log(localStorage.getItem("inactiveProject"));
+    var listOfProject = JSON.parse(localStorage.getItem("inactiveProject"));
+    if(listOfProject == null){
+      listOfProject = [];
+    }
+    listOfProject.push(p);
+    localStorage.setItem("inactiveProject", JSON.stringify(listOfProject));
   }
-//TODO link this to inactive projects
-
-}
 </script>
 
 </body>
