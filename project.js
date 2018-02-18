@@ -40,7 +40,7 @@ function inactiveProject(projectName, budget, projectID){
     "        <p class=\"project_name\">"+this.projectName+"</p>" +
     "        <p class=\"budget\">Budget: $"+budget+"</p>\n" +
     "        <p class=\"find_stylist\">Find Your Personal Stylist</p>" +
-    "<button onclick=\"finishIt2(this)\" value=\""+projectID+"\">finish</button>"+
+    "<button onclick=\"finishIt2(this)\" value=\""+projectID+"\">Make Active</button>"+
     "      </div>";
   }
 }
