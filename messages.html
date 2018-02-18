@@ -3,7 +3,7 @@
 <head>
 
   <title>Contact PS!</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="message.css">
 
   <meta charset="UTF-8">
   <meta name="author" content="Edward Guo, Jason Wong, Zhe Wang">
@@ -11,6 +11,8 @@
 
 
   <style>
+
+
   input[type=text] {
     width: 90%;
     box-sizing: border-box;
@@ -47,10 +49,10 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
+  }
 
   .column {
-      padding: 0px;
+    padding: 0px;
   }
   .row {
     padding: 0px;
@@ -66,6 +68,7 @@
   }
 
   .content{
+
   }
 
   .input_and_send{
@@ -74,6 +77,11 @@
 
   }
 
+  .chatBox{
+  }
+
+  .chatContent{
+  }
 
 
 
@@ -94,7 +102,7 @@
   <table style="width:100%">
     <tr>
       <th style="width:10%" align="left">Messages</th>
-      <th style="width:90%" align="left"><input type="text" id="search" class="search" float="right" placeholder="Search..."></th>
+      <th style="width:90%" align="left"><input type="text" id="search" class="search" float="right" placeholder="Search..." ></th>
     </tr>
   </table>
 
@@ -102,53 +110,46 @@
     <div class="row" style="height:100%">
       <div class="column" style="flex:25%;" >
         <div class="contract">
-            <div class="people">
-                <h3>Jane Doe</h3>
-                <h4>How about this st...</h4>
-            </div>
-            <div class="people">
-                <h3>Jane Doe</h3>
-                <h4>How about this st...</h4>
-            </div>
-            <div class="people">
-                <h3>Jane Doe</h3>
-                <h4>How about this st...</h4>
-            </div>
-            <div class="people">
-                <h3>Jane Doe</h3>
-                <h4>How about this st...</h4>
-            </div>
+          <div class="people">
+            <h3>Jane Doe</h3>
+            <h4>How about this st...</h4>
+          </div>
         </div>
       </div>
       <div class="column" style="flex:75%; border-left:solid; height:100%;">
 
-        <div class="row" style="height: 92%">
-          <div class="content">
-
-
-          </div>
+        <div class="row" style="height: 92%; float: right;">
+          <div class="content" id="content" ></div>
         </div>
-        <div class="row"  style="height: 8%">
+        <div style="clear:both"></div>
+        <div class="row" style="height: 8%">
 
           <div class="input_and_send" style="width: 100%; height: 100%">
 
             <div class="column" style="border-top:solid; height: 100%; width:85%;">
-              <input type="input" class="text_input" float="right" placeholder="Please say something...">
+              <input type="input" class="text_input" float="right" placeholder="Please say something..." id="inputBox">
             </div>
 
             <div class="column" style=" width:15%;border-top:solid;">
-              <button type="button">Send</button>
+              <button type="button" onclick="sendMessage()" >Send</button>
             </div>
-
-
           </div>
-
         </div>
       </div>
-
     </div>
   </div>
 
-
 </body>
+<script src="project.js"></script>
+<script>
+
+  document.getElementById("inputBox")
+      .addEventListener("keyup", function(event) {
+      event.preventDefault();
+      if (event.keyCode === 13) {
+
+          sendMessage();
+      }
+  });
+</script>
 </html>
